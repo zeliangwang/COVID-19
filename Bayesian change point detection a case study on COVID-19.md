@@ -18,6 +18,8 @@ All the code used to produce the results in this study can be found [here](https
 
 Potentially, Bayesian change point analysis can also be applied our Eniscope recorded data to inform the change points of energy consumption for a particular meter channel. If the energy usage of a monitored device changed in a characteristic way at some date, for example, an air conditioning unit with old, clogged filters will gradually use more energy, we would like to identify that date on which changes to the normal usage occurred by using Bayesian change point analysis. This will lead to the development of the predictive maintenance software. 
 
+
+
 ### 2. Proof of concept
 
 To check if there exists a real change point (flattened curve) of the daily confirmed cases in UK, we firstly select the UK's COVID-19 data from 3rd March till 30th April, and then split the data into two parts based on a randomly chosen date, in this case, 42 days since 3rd March. We then fit linear regression models to both parts of data (See Fig. 1 for the piecewise linear regression models).
