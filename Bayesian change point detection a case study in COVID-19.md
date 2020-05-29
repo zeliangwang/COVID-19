@@ -12,7 +12,7 @@ By looking at the number of daily cases as shown in Fig. 1, it is very difficult
 
 Fig. 1. Confirmed COVID-19 cases in UK. 
 
-All the code used to produce the results in this study can be found [here]()
+All the code used to produce the results in this study can be found [here](https://github.com/zeliangwang/COVID-19).
 
 #### Extend to Eniscope Recorded Data
 
