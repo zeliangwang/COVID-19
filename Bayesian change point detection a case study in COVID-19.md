@@ -1,6 +1,6 @@
 ## Bayesian change point detection: a case study on COVID-19 confirmed cases in UK
 
-Z. Wang
+*Zeliang Wang*
 
 ### 1. Problem definition
 
@@ -8,9 +8,11 @@ As COVID-19 is rapidly spreading across the globe, I have been trying for some t
 
 By looking at the number of daily cases as shown in Fig. 1, it is very difficult to visually determine a change point, and it is even more difficult by looking at the accumulated number of cases.  
 
-![cases-uk](/home/zeliang/github_repo/covid-19/plots/confirmed-cases-uk.svg)
+![](plots/fig1-confirmed-cases-uk.svg)
 
-Fig. 1. Confirmed COVID-19 cases in UK.
+Fig. 1. Confirmed COVID-19 cases in UK. 
+
+All the code used to produce the results in this study can be found [here]()
 
 #### Extend to Eniscope Recorded Data
 
@@ -20,7 +22,7 @@ Potentially, Bayesian change point analysis can also be applied our Eniscope rec
 
 To check if there exists a real change point (flattened curve) of the daily confirmed cases in UK, we firstly select the UK's COVID-19 data from 3rd March till 30th April, and then split the data into two parts based on a randomly chosen date, in this case, 42 days since 3rd March. We then fit linear regression models to both parts of data (See Fig. 1 for the piecewise linear regression models).
 
-![piecewise-lg-uk](/home/zeliang/github_repo/covid-19/plots/piecewise-lg-uk.svg)
+![piecewise-lg-uk](plots/fig2-piecewise-lg-uk.svg)
 
 Fig. 2.  Piecewise regression model for COVID-19 cases in UK.
 
@@ -70,7 +72,7 @@ To compute the distribution over the parameters, we use Markov Chain Monte Carlo
 
 The posterior distributions of $w_1$, $w_2$, $b_1$, $b_2$, $\tau$ and $\sigma$ are illustrated in Fig. 3. **Clearly, the posteriors for $w_1$ and $w_2$, along with $b_1$ and $b_2$ do not overlap with each other, which proves that the change point estimated by our model is true**.
 
-![posterior-dist-uk](/home/zeliang/github_repo/covid-19/plots/posterior-dist-uk.svg)
+![posterior-dist-uk](plots/fig3-posterior-dist-uk.svg)
 
 Fig. 3 Posterior distributions of model parameters for COVID-19 confirmed cases in UK.
 
@@ -88,7 +90,7 @@ where $M$ denotes the number of accepted samples after using MCMC.
 
 The left plot of Fig 4 shows the log of number of daily cases which is what we used to train the model, along with the predicted mean and $90\%$ credible interval. The dotted vertical line indicates the change point along with its $90\%$ credible interval estimated by the model. Also the right plot shows the real number of daily cases. 
 
-![change-point-uk](/home/zeliang/github_repo/covid-19/plots/change-point-uk.svg)
+![change-point-uk](plots/fig4-change-point-uk.svg)
 
 Fig. 4 Estimated change point for COVID-19 cases in UK.
 
